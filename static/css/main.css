@@ -1,0 +1,265 @@
+body {
+    font-family: 'Linden Hill', Georgia, serif;
+    font-size: 19px;
+}
+
+#blogtitle {
+    font-size: 3em;
+}
+#blogtitle a, #blogtitle a:hover, #blogtitle a:visited {
+    color: #000;
+    text-decoration: none;
+}
+#blogsubtitle {
+}
+#blogsubtitle a, #blogsubtitle a:hover, #blogsubtitle a:visited {
+    color: #000;
+    text-decoration: overline;
+}
+#mainnav {
+    margin: 0;
+    padding: 15px 0 0;
+    font-size: 20px;
+    float: right;
+}
+
+#mainnav li {
+    list-style-type: none;
+    text-align: center;
+    display: inline-block;
+}
+
+#mainnav li:before {
+    content: '{\00A0';
+}
+#mainnav li:after {
+    content: '\00A0}';
+}
+
+#content {
+    margin-top: 40px;
+}
+
+#content p {
+    text-align: justify;
+    margin-top: 0;
+}
+
+div.highlight pre, pre.literal-block {
+    margin: 5px;
+    font-family: 'Consolas', 'Menlo', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
+    font-size: 14px;
+}
+
+div.highlight, pre.literal-block {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+pre.literal-block {
+    padding: 5px;
+}
+
+tt.literal {
+    font-family: 'Consolas', 'Menlo', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
+    background-color: #eee;
+    padding: 2px 5px;
+    font-size: 0.8em;
+}
+
+cite {
+    font-family: 'Consolas', 'Menlo', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
+    font-size: 13px;
+    font-style: normal;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 15px 0;
+}
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+}
+
+tr {
+    display: table-row;
+}
+
+th, td {
+    display: table-cell;
+    border: 1px solid #ccc;
+    padding: 4px 8px;
+}
+
+th {
+    font-weight: bold;
+}
+
+.figure .caption {
+    font-style: italic;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h1 cite {
+    font-size: 26px;
+    margin: 0 2px;
+}
+
+h2 {
+    margin: 0;
+    padding: 15px 0 20px;
+}
+
+.archives h2 {
+    margin-bottom: 15px;
+}
+
+h3 {
+    margin: 0;
+}
+
+div.date {
+    color: #777;
+    display: inline-block;
+}
+
+div.date p {
+    margin: 0 0 15px;
+}
+
+img.flattrbutton {
+    margin-top: 15px;
+    float: right;
+}
+
+div.tags p {
+    float: right;
+    clear: both;
+}
+
+.field-list .field-name {
+    text-align: left;
+    padding-right: 15px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a, a:visited {
+    color: #2669AD;
+}
+
+.entry-overview {
+    margin-bottom: 35px;
+}
+
+.entry-overview h1 {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.entry-overview h2 {
+    padding: 0;
+}
+
+.entry-overview .summary p {
+    margin: 0;
+}
+
+.tags {
+    margin-top: 20px;
+}
+
+.tags:after {
+    content: " ";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+#disqus_thread {
+    margin-top: 30px;
+}
+
+.align-center {
+    display: block;
+    margin: 0 auto;
+}
+
+.align-right {
+    float: right;
+    margin-left: 28px;
+}
+
+.align-left {
+    float: left;
+    margin-right: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+#right-side {
+    margin-top: 40px;
+}
+
+#right-side .section-container {
+    text-align: right;
+    margin-bottom: 30px;
+}
+
+#right-side .section-container h3 {
+    text-decoration: underline;
+}
+
+#right-side .section-container ul {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+#right-side .section-container ul li {
+    list-style: none;
+    font-size: 0.9em;
+}
+
+ul.tagcloud {
+  list-style: none;
+    padding: 0;
+}
+
+ul.tagcloud li {
+    display: inline-block;
+}
+
+li.tag-0 {
+    font-size: 150%;
+}
+
+li.tag-1 {
+    font-size: 120%;
+}
+li.tag-2 {
+    font-size: 90%;
+}
+li.tag-3 {
+    font-size: 60%;
+}
+
+#right-side #copyright {
+    font-size: 0.8em;
+    border-top: solid 0.5px #000;
+}

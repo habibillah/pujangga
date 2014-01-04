@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Entries tagged "{{ tag }}" - {{ SITENAME }}{% endblock %}
+
+{% block content %}
+
+    <h1 class="title">Entries tagged “#{{ tag }}”</h1>
+
+    {%- for article in articles %}
+        <article class="entry-overview">
+            <div class="date">{{ article.locale_date }}</div>
+            <div class="detail">
+                <header><h3>
+                    <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">
+                        {{ article.title }}
+                    </a>
+                </h3></header>
+                <div class="summary">{{ article.summary|striptags }}</div>
+            </div>
+        </article>
+    {% endfor %}
+
+{% endblock %}

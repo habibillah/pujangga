@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    {%- for article in articles_page.object_list %}
+
+        <article class="entry-overview">
+            <div class="date">{{ article.locale_date }} by <a rel="author" href="{{ SITEURL }}/pages/aboutme.html">{{ AUTHOR }}</a></div>
+            <div class="detail">
+                <header><h2>
+                    <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">
+                        {{ article.title }}
+                    </a>
+                </h2></header>
+                <div class="summary">{{ article.content }}</div>
+                <div class="indextags">
+                    {% for tag in article.tags|sort %}
+                        <a href="{{ SITEURL }}/{{ tag.url }}">#{{ tag.name.replace(' ', '_') }}</a>&nbsp;
+                    {% endfor %}
+                </div>
+            </div>
+        </article>
+
+      {%- endfor %}
+
+      {% include 'pagination.html' %}
+
+{% endblock %}

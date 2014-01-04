@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <section id="content" class="body archives">
+        <h1>Blog Archive</h1>
+
+        {% set current_year = 0 %}
+        {% set current_month = 0 %}
+        {% for article in dates %}
+            {% if article.date.year != current_year or article.date.month != current_month %}
+                <h2>{{ article.date.strftime("%B %Y") }}</h2>
+            {% endif %}
+            {% if article.date.year != current_year %}{% set current_year = article.date.year %}{% endif %}
+            {% if article.date.month != current_month %}{% set current_month = article.date.month %}{% endif %}
+            <article class="entry-overview">
+                <div class="date">{{ article.locale_date }} by <a rel="author" href="{{ SITEURL }}/pages/aboutme.html">{{ AUTHOR }}</a></div> 
+                <div class="detail">
+                    <header><h3>
+                        <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">
+                            {{ article.title }}
+                        </a>
+                    </h3></header>
+                    <div class="summary">{{ article.summary|striptags }}</div>
+                </div>
+            </article>
+        {% endfor %}
+        </dl>
+    </section>
+
+{% endblock %}

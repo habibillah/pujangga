@@ -1,0 +1,54 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*- #
+from __future__ import unicode_literals
+
+AUTHOR = u'Habibillah'
+SITENAME = u'Jejak-jejak Kehidupan'
+SITESUBTITLE = u'Belajar menuliskan jejak untuk kehidupan yang lebih baik'
+SITEURL = 'http://habibillah.kalicode.com'
+
+TIMEZONE = 'Asia/Jakarta'
+
+DEFAULT_LANG = u'en'
+
+THEME = "pujangga"
+
+# Blogroll
+LINKS =  (('habibillah@wordpress', 'http://habibillah.wordpress.com/'),
+          ('Pelican', 'http://getpelican.com/'),
+          ('Python.org', 'http://python.org/'),
+          ('Jinja2', 'http://jinja.pocoo.org/'),)
+
+# Social widget
+SOCIAL = (('Stackoverflow', 'http://stackoverflow.com/users/1091251/habibillah'),
+          ('Facebook', 'https://www.facebook.com/habibillah'),
+          ('Twitter','https://twitter.com/habibillah_ali'),
+          ('Linkedin', 'http://www.linkedin.com/in/habibillah'),
+          ('Github', 'http://www.github.com/habibillah'),
+          ('Email', 'mailto:habibillah[@]kalicode[.]com'),)
+
+DEFAULT_PAGINATION = 10
+DISPLAY_PAGES_ON_MENU = True
+
+# Uncomment following line if you want document-relative URLs when developing
+RELATIVE_URLS = False
+
+ARTICLE_URL = 'posts/{date:%Y}/{date:%m}/{date:%d}/{slug}/'
+ARTICLE_SAVE_AS = 'posts/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
+
+YEAR_ARCHIVE_SAVE_AS = 'posts/{date:%Y}/index.html'
+MONTH_ARCHIVE_SAVE_AS = 'posts/{date:%Y}/{date:%m}/index.html'
+DAY_ARCHIVE_SAVE_AS = 'posts/{date:%Y}/{date:%m}/{date:%d}/index.html'
+
+FEED_ALL_ATOM = 'feeds/index.xml'
+FEED_ALL_RSS = 'rss/index.xml'
+
+PYGMENTS_RST_OPTIONS = {'linenos': 'table'}
+
+# Following items are often useful when publishing
+
+DISQUS_SITENAME = "kalicode"
+GOOGLE_ANALYTICS = "UA-46796992-1"
+TWITTER_USERNAME = "habibillah_ali"
+#GOOGLE_CUSTOM_SEARCH_SIDEBAR = '002631602920485605257:l9lcoesq7tg'
+

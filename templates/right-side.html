@@ -1,0 +1,99 @@
+{% if GOOGLE_CUSTOM_SEARCH_SIDEBAR %}
+<script>
+  (function() {
+    var cx = '002631602920485605257:l9lcoesq7tg';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//www.google.com/cse/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+{% endif %}
+
+{% if LINKS %}
+<div class="section-container">
+   <h3>Blogroll</h3>
+   <ul>
+   {% for name, url in LINKS %}
+      <li><a href="{{ url }}" target="_blank">{{ name }} <i class="fa fa-globe fa-fw"></i></a></li>
+   {% endfor %}
+   </ul>
+</div>
+{% endif %}
+
+{% if SOCIAL %}
+<div class="section-container">
+   <h3>Social Network</h3>
+   <ul>
+   {% for name, url in SOCIAL %}
+      <li>
+        <a href="{{ url }}" target="_blank">{{ name }}&nbsp;
+        {% if name == 'Stackoverflow' %}
+           <i class="fa fa-stack-overflow fa-fw"></i>
+        {% elif name == 'Facebook' %}
+           <i class="fa fa-facebook fa-fw"></i>
+        {% elif name == 'Twitter' %}
+           <i class="fa fa-twitter fa-fw"></i>
+        {% elif name == 'Linkedin' %}
+           <i class="fa fa-linkedin fa-fw"></i>
+        {% elif name == 'Github' %}
+           <i class="fa fa-github fa-fw"></i>
+        {% elif name == 'Email' %}
+           <i class="fa fa-envelope fa-fw"></i>
+        {% else %}
+           <i class="fa fa-globe fa-fw"></i>
+        {% endif %}
+        </a>
+      </li>
+   {% endfor %}
+   </ul>
+</div>
+{% endif %}
+
+<div class="section-container">
+   <h3>Categories</h3>
+   <ul>
+     {% for category in categories %}
+        <li><a href="{{ SITEURL }}/{{ category.0.url }}">{{ category.0 }} <i class="fa fa-folder-open fa-fw"></i></a></li>
+     {% endfor %}
+   </ul>
+</div>
+
+<div class="section-container">
+   <h3>Tags</h3>
+   <ul class="tagcloud">
+     {% for tag in tag_cloud %}
+        <li class="tag-{{ tag.1 }}"><a href="{{ SITEURL }}/{{ tag.0.url }}">#{{ tag.0.name.replace(' ', '_') }}</a></li>
+     {% endfor %}
+   </ul>
+</div>
+
+{% if FEED_ALL_ATOM or FEED_ALL_RSS %}
+<div class="section-container">
+   <h3>Feeds</h3>
+   <ul>
+      {% if FEED_ALL_ATOM %}
+      <li><a href="{{ SITEURL }}/{{ FEED_ALL_ATOM }}" rel="alternate">atom feed <i class="fa fa-rss fa-fw"></i></a></li>
+      {% endif %}
+      {% if FEED_ALL_RSS %}
+      <li><a href="{{ SITEURL }}/{{ FEED_ALL_RSS }}" rel="alternate">rss feed <i class="fa fa-rss-square fa-fw"></i></a></li>
+      {% endif %}
+   </ul>
+</div>
+{% endif %}
+
+{% if MONTH_ARCHIVE_SAVE_AS %}
+<div class="section-container">
+   <h3>Archives</h3>
+   <ul>
+   {% for article in dates %}
+      <li><a href="{{ SITEURL }}/posts/{{ article.date.strftime('%Y') }}/{{ article.date.strftime('%m') }}/index.html">{{ article.date.strftime("%B %Y") }}</a></li>
+   {% endfor %}
+   </ul>
+</div>
+{% endif %}
+
