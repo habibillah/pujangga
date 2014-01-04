@@ -1,4 +1,4 @@
-pujangga
+Pujangga
 ========
 
 Just another Pelican site generator theme
