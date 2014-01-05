@@ -45,6 +45,10 @@ body {
     margin-top: 0;
 }
 
+#content img {
+   max-width: 99%;
+}
+
 div.highlight pre, pre.literal-block {
     margin: 5px;
     font-family: 'Consolas', 'Menlo', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
