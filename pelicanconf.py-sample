@@ -13,6 +13,8 @@ DEFAULT_LANG = u'en'
 
 THEME = "pujangga"
 
+SHOW_CONTENT_SUMMARY_ON_INDEX = True
+
 # Blogroll
 LINKS =  (('habibillah@wordpress', 'http://habibillah.wordpress.com/'),
           ('Pelican', 'http://getpelican.com/'),

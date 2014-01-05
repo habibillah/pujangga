@@ -12,8 +12,13 @@
                         {{ article.title }}
                     </a>
                 </h2></header>
-                <div class="clearboth">{{ article.content }}</div>
-                
+
+                {% if SHOW_CONTENT_SUMMARY_ON_INDEX %}
+                   <div class="summary">{{ article.summary|striptags }} <a href="{{ SITEURL }}/{{ article.url }}">read more</a></div>
+                {% else %}
+                   <div class="clearboth">{{ article.content }}</div>
+                {% endif %}
+
                 {% if article.tags %}
                     <div class="tags">
                         <p>This entry was tagged on  
