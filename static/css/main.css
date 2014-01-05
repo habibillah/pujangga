@@ -65,10 +65,11 @@ div.highlight pre, pre.literal-block {
 }
 
 div.highlight, pre.literal-block {
-    font-family: 'Anonymous Pro', 'Consolas', 'Menlo', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
-    border: 1px solid #ddd;
-    margin-bottom: 20px;
-    padding: 10px 6px;
+    border: 1px solid #DDDDDD;
+    font-family: 'Anonymous Pro','Consolas','Menlo','Deja Vu Sans Mono','Bitstream Vera Sans Mono',monospace;
+    margin: 20px 0;
+    overflow: auto;
+    padding: 10px;
 }
 
 pre.literal-block {
