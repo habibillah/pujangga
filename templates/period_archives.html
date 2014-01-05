@@ -3,13 +3,11 @@
 {% block content %}
 
     <section id="content" class="body archives">
-        <h1>Blog Archive</h1>
-
         {% set current_year = 0 %}
         {% set current_month = 0 %}
         {% for article in dates %}
             {% if article.date.year != current_year or article.date.month != current_month %}
-                <h2>{{ article.date.strftime("%B %Y") }}</h2>
+                <h1>Blog Archive "{{ article.date.strftime("%B %Y") }}"</h1>
             {% endif %}
             {% if article.date.year != current_year %}{% set current_year = article.date.year %}{% endif %}
             {% if article.date.month != current_month %}{% set current_month = article.date.month %}{% endif %}
