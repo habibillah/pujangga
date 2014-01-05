@@ -90,9 +90,18 @@
 <div class="section-container">
    <h3>Archives</h3>
    <ul>
-   {% for article in dates %}
-      <li><a href="{{ SITEURL }}/posts/{{ article.date.strftime('%Y') }}/{{ article.date.strftime('%m') }}/index.html">{{ article.date.strftime("%B %Y") }}</a></li>
-   {% endfor %}
+      <li><a href="{{ SITEURL }}/archives.html">All Archives</a></li>
+      {% set current_year = 0 %}
+      {% set current_month = 0 %}    
+      {% for article in articles %}
+         {% if article.date.year != current_year or article.date.month != current_month %}
+            <li><a href="{{ SITEURL }}/posts/{{ article.date.strftime('%Y') }}/{{ article.date.strftime('%m') }}/index.html">{{ article.date.strftime("%B %Y") }}</a></li>
+         {% endif %}
+      
+         {% if article.date.year != current_year %}{% set current_year = article.date.year %}{% endif %}
+         {% if article.date.month != current_month %}{% set current_month = article.date.month %}{% endif %}
+
+      {% endfor %}
    </ul>
 </div>
 {% endif %}
