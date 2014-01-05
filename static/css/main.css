@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'Anonymous Pro';
+    src: local('Anonymous Pro'), 
+         url('../fonts/AnonymousPro.eot') format("embedded-opentype"),
+         url('../fonts/AnonymousPro.ttf') format('truetype');
+}
+
 body {
     font-family: 'Linden Hill', Georgia, serif;
     font-size: 19px;
@@ -46,19 +53,22 @@ body {
 }
 
 #content img {
-   max-width: 99%;
+    display: block;
+    margin: 20px auto;
+    max-width: 85%;
 }
 
 div.highlight pre, pre.literal-block {
     margin: 5px;
-    font-family: 'Consolas', 'Menlo', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
+    font-family: 'Anonymous Pro', 'Consolas', 'Menlo', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
     font-size: 14px;
 }
 
 div.highlight, pre.literal-block {
-    background-color: #f4f4f4;
+    font-family: 'Anonymous Pro', 'Consolas', 'Menlo', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
     border: 1px solid #ddd;
     margin-bottom: 20px;
+    padding: 10px 6px;
 }
 
 pre.literal-block {
@@ -66,16 +76,24 @@ pre.literal-block {
 }
 
 tt.literal {
-    font-family: 'Consolas', 'Menlo', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
+    font-family: 'Anonymous Pro', 'Consolas', 'Menlo', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
     background-color: #eee;
     padding: 2px 5px;
     font-size: 0.8em;
 }
 
 cite {
-    font-family: 'Consolas', 'Menlo', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
+    font-family: 'Anonymous Pro', 'Consolas', 'Menlo', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
     font-size: 13px;
     font-style: normal;
+}
+
+code {
+    background-color: #EEEEEE;
+    font-family: 'Anonymous Pro', 'Consolas', 'Menlo', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
+    border: 1px solid #ddd;
+    padding: 0 2px 2px 3px;
+    font-size: 0.8em;
 }
 
 table {
@@ -127,6 +145,25 @@ h2 {
 
 h3 {
     margin: 0;
+}
+
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  display: inline;
 }
 
 div.date {
@@ -233,6 +270,7 @@ a, a:visited {
 #right-side .section-container ul {
     margin-top: 12px;
     margin-bottom: 12px;
+    padding-left: 0;
 }
 
 #right-side .section-container ul li {
@@ -245,22 +283,27 @@ ul.tagcloud {
     padding: 0;
 }
 
-ul.tagcloud li {
+#right-side .section-container ul.tagcloud li {
     display: inline-block;
 }
 
-li.tag-0 {
-    font-size: 150%;
+#right-side .section-container ul.tagcloud li.tag-0 {
+    font-size: 140%;
 }
 
-li.tag-1 {
-    font-size: 120%;
+#right-side .section-container ul.tagcloud li.tag-1 {
+    font-size: 130%;
 }
-li.tag-2 {
+
+#right-side .section-container ul.tagcloud li.tag-2 {
+    font-size: 100%;
+}
+#right-side .section-container ul.tagcloud li.tag-3 {
     font-size: 90%;
 }
-li.tag-3 {
-    font-size: 60%;
+
+#right-side .section-container ul.tagcloud li.tag-4 {
+    font-size: 80%;
 }
 
 #right-side #copyright {
