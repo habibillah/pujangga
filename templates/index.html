@@ -12,12 +12,19 @@
                         {{ article.title }}
                     </a>
                 </h2></header>
-                <div class="summary">{{ article.content }}</div>
-                <div class="indextags">
-                    {% for tag in article.tags|sort %}
-                        <a href="{{ SITEURL }}/{{ tag.url }}">#{{ tag.name.replace(' ', '_') }}</a>&nbsp;
-                    {% endfor %}
-                </div>
+                <div class="clearboth">{{ article.content }}</div>
+                
+                {% if article.tags %}
+                    <div class="tags">
+                        <p>This entry was tagged on  
+                        {% for tag in article.tags|sort %}
+                            {%- if not loop.first and not loop.last %}, {% endif -%}
+                            {%- if loop.last and not loop.first %} and {% endif %}
+                            <a href="{{ SITEURL }}/{{ tag.url }}">#{{ tag.name.replace(' ', '_') }}</a>
+                        {%- endfor %}</p>
+                    </div>
+                {% endif %}
+
             </div>
         </article>
 

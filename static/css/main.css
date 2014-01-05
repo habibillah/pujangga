@@ -155,14 +155,7 @@ blockquote {
   padding: 0.5em 10px;
   quotes: "\201C""\201D""\2018""\2019";
 }
-blockquote:before {
-  color: #ccc;
-  content: open-quote;
-  font-size: 4em;
-  line-height: 0.1em;
-  margin-right: 0.25em;
-  vertical-align: -0.4em;
-}
+
 blockquote p {
   display: inline;
 }
@@ -181,9 +174,11 @@ img.flattrbutton {
     float: right;
 }
 
-div.tags p {
+div.tags p, #content div.tags p {
     float: right;
     clear: both;
+    text-align: right;
+    max-width: 90%;
 }
 
 .field-list .field-name {
@@ -221,7 +216,7 @@ a, a:visited {
 }
 
 .tags {
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .tags:after {
