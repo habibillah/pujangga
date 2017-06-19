@@ -299,3 +299,7 @@ ul.tagcloud {
     font-size: 0.8em;
     border-top: solid 0.5px #000;
 }
+
+img {
+    max-width: 100%;
+}
